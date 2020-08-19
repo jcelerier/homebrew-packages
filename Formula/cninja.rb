@@ -12,7 +12,7 @@ class Cninja < Formula
     system "cmake", ".", *std_cmake_args
     system "make"
     system "make", "install"
-    bin.install_symlink bin/"cninja" => "cninja"
+    bin.install_symlink "cninja" => "cninja"
   end
 
   test do
