@@ -1,8 +1,8 @@
 class Cninja < Formula
-  desc "Opinionated cmake configuration manager"
+  desc "Opinionated CMake configuration manager"
   homepage "https://github.com/jcelerier/cninja"
-  url "https://github.com/jcelerier/cninja/releases/download/v3.5.0/cninja-3.5.0-src.tar.gz"
-  sha256 "6b39182374bfa4a8a94452d1c5583b6a683c3d2e93d7767802cc36d55e98326e"
+  url "https://github.com/jcelerier/cninja/releases/download/v3.5.2/cninja-3.5.2-src.tar.gz"
+  sha256 "5b8a2b19b845ecabc7cbea2d786ca45430eabf01fb5bcfbaaa80819f0a0ce48e"
   license "AGPL-3.0-or-later"
 
   depends_on "boost" => :build
@@ -12,8 +12,6 @@ class Cninja < Formula
     system "cmake", ".", *std_cmake_args
     system "make"
     system "make", "install"
-    bin.mkpath
-    ln_sf "#{prefix}/cninja", "#{prefix}/bin/cninja"
   end
 
   test do
